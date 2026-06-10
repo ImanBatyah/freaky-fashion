@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Admin</h1>
+
+    <nav>
+      <a href="/">Start</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Administrera produkter</h2>
+      <p>Här kan du lägga till, visa och ta bort produkter som finns i databasen.</p>
+    </section>
+
+    <section class="admin-section">
+      <h2>Lägg till produkt</h2>
+
+      <form class="product-form" action="/admin/products" method="POST">
+        <label for="name">Produktnamn</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="price">Pris</label>
+        <input type="number" id="price" name="price" required>
+
+        <label for="sku">SKU</label>
+        <input type="text" id="sku" name="sku" required>
+
+        <label for="image">Bildlänk</label>
+        <input type="text" id="image" name="image" value="https://placehold.co/300x400" required>
+
+        <button type="submit">Lägg till produkt</button>
+      </form>
+    </section>
+
+    <section class="admin-section">
+      <h2>Produkter</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Namn</th>
+            <th>Pris</th>
+            <th>SKU</th>
+            <th>Åtgärd</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% products.forEach((product) => { %>
+            <tr>
+              <td><%= product.name %></td>
+              <td><%= product.price %> kr</td>
+              <td><%= product.sku %></td>
+              <td>
+                <form action="/admin/products/<%= product.id %>/delete" method="POST">
+                  <button class="delete-button" type="submit">Ta bort</button>
+                </form>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Freaky Fashion</p>
+  </footer>
+</body>
+</html>

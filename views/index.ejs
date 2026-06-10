@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Freaky Fashion</h1>
+
+    <nav>
+      <a href="/">Start</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Välkommen till Freaky Fashion</h2>
+      <p>Mode för dig som vill sticka ut.</p>
+    </section>
+
+    <section class="products">
+      <% products.forEach((product) => { %>
+        <a class="product-link" href="/products/<%= product.id %>">
+          <article class="product-card">
+            <img src="<%= product.image %>" alt="<%= product.name %>">
+            <h3><%= product.name %></h3>
+            <p><%= product.price %> kr</p>
+          </article>
+        </a>
+      <% }) %>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Freaky Fashion</p>
+  </footer>
+</body>
+</html>

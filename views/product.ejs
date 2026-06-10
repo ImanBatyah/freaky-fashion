@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Freaky Fashion</h1>
+
+    <nav>
+      <a href="/">Start</a>
+      <a href="/admin">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="product-detail">
+      <img src="<%= product.image %>" alt="<%= product.name %>">
+
+      <div class="product-detail__content">
+        <h2><%= product.name %></h2>
+        <p><strong>Pris:</strong> <%= product.price %> kr</p>
+        <p><strong>SKU:</strong> <%= product.sku %></p>
+
+        <a class="back-link" href="/">Tillbaka till startsidan</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Freaky Fashion</p>
+  </footer>
+</body>
+</html>
