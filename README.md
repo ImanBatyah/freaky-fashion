@@ -35,4 +35,3 @@ Projektet använder följande tekniker:
 - CSS
 - GitHub
 - GitHub
-        └── footer.ejs
