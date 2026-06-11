@@ -33,7 +33,6 @@ Projektet använder följande tekniker:
 - SQLite
 - HTML
 - CSS
-- Git
 - GitHub
-        ├── header.ejs
+- GitHub
         └── footer.ejs
