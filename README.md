@@ -35,9 +35,5 @@ Projektet använder följande tekniker:
 - CSS
 - Git
 - GitHub
-
----
-
-
         ├── header.ejs
         └── footer.ejs
