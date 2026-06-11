@@ -33,5 +33,5 @@ Projektet använder följande tekniker:
 - SQLite
 - HTML
 - CSS
-- GitHub
+- Git
 - GitHub
