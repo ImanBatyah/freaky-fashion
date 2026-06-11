@@ -38,34 +38,6 @@ Projektet använder följande tekniker:
 
 ---
 
-## Projektstruktur
 
-```text
-freaky-fashion/
-│
-├── app.js
-├── database.js
-├── package.json
-├── package-lock.json
-├── README.md
-│
-├── db/
-│   └── freaky-fashion.sqlite
-│
-├── public/
-│   ├── css/
-│   │   └── style.css
-│   └── images/
-│       ├── black-tshirt.jpg
-│       ├── blue-jacket.jpg
-│       └── white-hoodie.jpg
-│
-└── views/
-    ├── index.ejs
-    ├── admin.ejs
-    ├── product.ejs
-    ├── layouts/
-    │   └── main.ejs
-    └── partials/
         ├── header.ejs
         └── footer.ejs
