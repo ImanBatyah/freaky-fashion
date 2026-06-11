@@ -1,26 +1,31 @@
 # Freaky Fashion
 
-Detta är ett skolprojekt i kursen Backend-utveckling med JavaScript.
+Detta är ett skolprojekt i kursen **Backend-utveckling med JavaScript**.
+
+Projektet är en enkel webbapplikation för en fiktiv webbshop där produkter visas på en startsida och kan hanteras via en admin-sida. Applikationen är byggd med Node.js, Express.js, EJS och SQLite.
+
+---
 
 ## Funktioner
 
 - Startsida med produkter
 - Produktsida för varje produkt
 - Admin-sida
-- Lägga till produkter
+- Lägg till produkter
 - Ta bort produkter
-- SQLite-databas
-- Express.js
-- EJS-vyer
-- Responsiv CSS med mobile first
+- Produkter sparas i SQLite-databas
+- Bilder hämtas från `public/images`
+- Responsiv layout
+- Mobile first-design
+- Semantisk HTML
+- Extern CSS
+- Git och GitHub för versionshantering
 
-## Starta projektet
+---
 
-Installera paket:
-
-```bash
-npm install
 ## Tekniker
+
+Projektet använder följande tekniker:
 
 - Node.js
 - Express.js
@@ -28,4 +33,39 @@ npm install
 - SQLite
 - HTML
 - CSS
-- Git och GitHub
+- Git
+- GitHub
+
+---
+
+## Projektstruktur
+
+```text
+freaky-fashion/
+│
+├── app.js
+├── database.js
+├── package.json
+├── package-lock.json
+├── README.md
+│
+├── db/
+│   └── freaky-fashion.sqlite
+│
+├── public/
+│   ├── css/
+│   │   └── style.css
+│   └── images/
+│       ├── black-tshirt.jpg
+│       ├── blue-jacket.jpg
+│       └── white-hoodie.jpg
+│
+└── views/
+    ├── index.ejs
+    ├── admin.ejs
+    ├── product.ejs
+    ├── layouts/
+    │   └── main.ejs
+    └── partials/
+        ├── header.ejs
+        └── footer.ejs
