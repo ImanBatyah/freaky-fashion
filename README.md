@@ -20,3 +20,12 @@ Installera paket:
 
 ```bash
 npm install
+## Tekniker
+
+- Node.js
+- Express.js
+- EJS
+- SQLite
+- HTML
+- CSS
+- Git och GitHub
